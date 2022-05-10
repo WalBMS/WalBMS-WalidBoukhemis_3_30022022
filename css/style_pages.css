@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap');
+
+body{                                                                          /* BODY */
+    font-family: 'Roboto', Arial, serif;
+}
+
+#bloc_page{                                                                    /* BLOC PAGE */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    font-size: 11px;
+    width: 992px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+Header{                                                                        /* HEADER */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #99E2D0;
+    width: 100%;
+} 
+
+.fa-arrow-left{
+    font-size: 20px;
+    height: 20px;
+    width: 100%;
+    color: black;
+}
+
+.logo{                                                                         /* LOGO */
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+    width: 80%;
+    margin-right: 20px;
+}
+
+#image{
+    width: 100%;
+    height: 200px;
+    background-size: 300px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#image img{
+    width: 992px;
+    height: auto;
+    margin-bottom: -200px;
+}
+
+.image__text{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    top: 200px;
+    font-size: 20px;
+    height: 50px;
+    width: 992px;
+    color: white;
+    font-family: 'Shrikhand', Arial, serif;
+}
+
+.image__text h2{
+    margin: 0px 0px 0px 10px;
+}
+
+.fa-heart{
+    margin: 0px 10px 10px 0px;
+}
+
+.fa-heart:hover{
+    transition: color 500ms;
+    font-weight: bold;
+    color: #9356DC;
+}
+
+main{                                                                          /* MAIN */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F5F5F5; 
+    width: 100%; 
+    padding-top: 10px;
+}
+
+.entrees__text{
+    font-size: 12px;
+    font-weight:normal;
+    color: gray;
+    border-bottom: 2px solid #99E2D0;
+    width: 30px;
+}
+
+.entrees__bouton{                                                              /* BOUTON ENTREES */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    width: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    background-color: white;
+    box-shadow: 3px 3px 3px lightgrey;  
+    opacity: 0;
+    animation: animation__bouton 3s both;
+}
+
+.entrees__bouton:hover .animation__margin{
+    animation: animation__margin 500ms both; 
+}
+
+.entrees__bouton:hover .fa-circle-check{
+    animation: animation__check 1s both;
+}
+
+.plats__text{
+    font-size: 12px;
+    font-weight:normal;
+    color: gray;
+    border-bottom: 2px solid #99E2D0;
+    width: 30px;
+}
+
+.plats__bouton{                                                                /* BOUTON PLATS */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    width: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    background-color: white;
+    box-shadow: 3px 3px 3px lightgrey;  
+    opacity: 0;
+    animation: animation__bouton 3s 1s both;
+}  
+
+.plats__bouton:hover .animation__margin{
+    animation: animation__margin 500ms both; 
+}
+
+.plats__bouton:hover .fa-circle-check{
+    animation: animation__check 1s both;
+}
+
+.desserts__text{
+    font-size: 12px;
+    font-weight:normal;
+    color: gray;
+    border-bottom: 2px solid #99E2D0;
+    width: 30px;
+}
+
+.desserts__bouton{                                                             /* BOUTON DESSERTS */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+    width: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    background-color: white;
+    box-shadow: 3px 3px 3px lightgrey;  
+    opacity: 0;
+    animation: animation__bouton 3s 2s both;
+}
+
+.desserts__bouton:hover .animation__margin{
+    animation: animation__margin 500ms both; 
+}
+
+.desserts__bouton:hover .fa-circle-check{
+    animation: animation__check 1s both;
+}
+
+@keyframes animation__bouton{                                                  /* ANIMATION BUTTON */
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes animation__margin{                                                  /* ANIMATION MARGIN BUTTON */
+    0%{
+        margin-right: -70px;
+    }
+
+    100%{
+        margin-right: -14px;
+    }
+}
+
+@keyframes animation__check {                                                  /* ANIMATION CHECK */
+    0%{
+        transform: rotate(0deg);  
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.animation__margin{
+    display: flex;
+    flex-direction: row;
+    background-color: #99E2D0;
+    width: 50px;
+    height: 52px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-right: -70px;
+    position: relative;
+    top: -12px;
+    transition: margin-right 1s both;
+    animation: transform 5s both;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-circle-check{
+    font-size: 15px;
+    color: white;
+}
+
+.bouton__bold{
+    font-weight: bold;
+    font-size: 13px;
+    width: 85%;
+    margin-top: 10px;
+    margin-bottom: -15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bouton__tarif{
+    font-weight: bold;
+}
+
+.bouton__text{
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#commander{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #F5F5F5;
+    width: 100%;
+}
+
+.commander__btn{                                                               /* BOUTON COMMANDER */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    height: 35px;
+    width: 150px; 
+    color: white;
+    opacity: 1;
+    margin: 35px 0px 35px 0px;
+    background: linear-gradient(#FF79DA, #9356DC);
+}
+
+.commander__btn:hover{
+    box-shadow: 0px 6px 6px lightgrey;
+    opacity: 0.8;
+}   
+
+footer{                                                                        /* FOOTER */
+    display: flex;
+    flex-direction:column;
+    background-color: #323232;
+    width: 100%;
+    line-height: 25px;
+    color: white;
+}
+    
+.modif__color--white > img{
+    filter: invert(100%);
+}
+    
+.logo__footer{
+    margin: 16px 0px -10px 35px;
+    width: 120px;
+}
+    
+footer ul{
+    list-style-type: none;
+}
+
+.fa-utensils{
+    margin-right: 10px;
+}
+
+.fa-handshake-angle{
+    margin-right: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px){                              /* TABLET VERSION */
+    #bloc_page{                                                                /* BLOC PAGE */
+        margin: auto;
+        font-size: 11px;
+        width: 100%;
+    } 
+
+    #image img{
+        width: 100%;
+        height: auto;
+    }
+
+    .image__text{
+        left: 20px;
+        height: 50px;
+        width: 95%;
+    }
+
+    .fa-heart:active{
+        font-weight:unset;
+        color:inherit;
+    }
+    
+    .fa-heart:active{
+        font-weight: bold;
+        color: #9356DC;
+    }
+
+    .entrees__bouton:active .animation__margin{
+        animation: animation__margin 500ms both; 
+    }
+    
+    .entrees__bouton:active .fa-circle-check{
+        animation: animation__check 1s both;
+    }
+
+    .plats__bouton:active .animation__margin{
+        animation: animation__margin 500ms both; 
+    }
+    
+    .plats__bouton:active .fa-circle-check{
+        animation: animation__check 1s both;
+    }
+
+    .desserts__bouton:active .animation__margin{
+        animation: animation__margin 500ms both; 
+    }
+    
+    .desserts__bouton:active .fa-circle-check{
+        animation: animation__check 1s both;
+    }
+}
+
+@media (max-width: 767px)                                                      /* MOBILE VERSION */
+{
+    #bloc_page{                                                                /* BLOC PAGE */
+        width: 100%;
+    }
+
+    Header{                                                                    /* HEADER */
+        width: 272px;
+        background-color: white;
+    }
+
+    .logo{                                                                     /* LOGO */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #image{
+        width: 272px;
+        margin: 0px 0px 20px 0px;
+    }
+
+    #image img{
+        width: 272px;
+        height: 200px;
+    }
+
+    .image__text{
+        align-items: center;
+        height: 55px;
+        width: 254px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        position: absolute;
+        top: 223px;
+        margin-left: -1px;
+        background-color: #F5F5F5;
+        font-size: 13px;
+        color: black;
+    }
+
+    .fa-heart{
+        font-size: 20px;
+        color: black;
+        margin: 0px 10px 0px 0px;
+    }
+
+    .fa-heart:active{
+        font-weight:unset;
+        color:inherit;
+    }
+    
+    .fa-heart:active{
+        font-weight: bold;
+        color: #9356DC;
+    }
+
+    main{                                                                      /* MAIN */
+        flex-direction: column;
+        width: 272px;
+        margin-top: -5px;
+    }
+
+    .entrees__bouton:active .animation__margin{
+        animation: animation__margin 500ms both; 
+    }
+    
+    .entrees__bouton:active .fa-circle-check{
+        animation: animation__check 1s both;
+    }
+
+    .plats__bouton:active .animation__margin{
+        animation: animation__margin 500ms both; 
+    }
+    
+    .plats__bouton:active .fa-circle-check{
+        animation: animation__check 1s both;
+    }
+
+    .desserts__bouton:active .animation__margin{
+        animation: animation__margin 500ms both; 
+    }
+    
+    .desserts__bouton:active .fa-circle-check{
+        animation: animation__check 1s both;
+    }
+
+    #commander{
+        width: 272px;
+    }
+
+    .commander__btn{                                                           /* BOUTON COMMANDER */
+        margin: 20px 0px 20px 0px;
+    }
+
+    footer{                                                                    /* FOOTER */
+        width: 272px;
+    }
+}
